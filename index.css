@@ -6,7 +6,7 @@
         text-align: center;
         margin-top: 20%;
         margin-bottom: 30%;
-        background-image: url('/image/memo.jpg');
+        background-image: url('./image/memo.jpg');
         background-repeat: repeat-y;
         background-size: cover;
         background-position: center;
@@ -70,7 +70,7 @@
         text-align: center;
         margin-top: 20%;
         margin-bottom: 30%;
-        background-image: url('/image/memo2.jpg');
+        background-image: url('./image/memo2.jpg');
         background-repeat: repeat-y;
         background-size: cover;
         background-position: center;
