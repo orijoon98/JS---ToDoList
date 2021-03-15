@@ -6,7 +6,7 @@ const LS_key = 'name';
 function saveName(){
     const name = input.value;
     localStorage.setItem(LS_key, name);
-    location.href='list.html';
+    location.href='./list.html';
 }
 
 function handleSubmit(event) {
