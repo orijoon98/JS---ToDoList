@@ -10,7 +10,7 @@ let toDos = [];
 
 function exitList(){
     localStorage.clear();
-    location.href='index.html';
+    location.href='./index.html';
 }
 
 function clickDeleteButton(event){
@@ -39,8 +39,8 @@ function printList(text){
     const temp = document.createElement('li');
     const deleteButton = document.createElement('button');
     const checkButton = document.createElement('button');
-    let delStr = '<img src="/image/delete.png">';
-    let checkStr = '<img src="/image/check.png">';
+    let delStr = '<img src="./image/delete.png">';
+    let checkStr = '<img src="./image/check.png">';
     let newId = toDos.length + 1;
     deleteButton.innerHTML = delStr;
     checkButton.innerHTML = checkStr;
@@ -88,7 +88,7 @@ function loadList(){
 function loadH1(){
     const name = localStorage.getItem('name');
     const exitButton = document.createElement('button');
-    let exitStr = '<img src="/image/exit.png">';
+    let exitStr = '<img src="./image/exit.png">';
     exitButton.setAttribute('class', 'exit');
     exitButton.innerHTML = exitStr;
     if(name !== null){
