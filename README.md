@@ -4,7 +4,8 @@
 1. Name
 2. Add List
 3. Delete List
-4. Reset
+4. Load List
+5. Reset
 
 ## 1. Name
 - 이름 입력 값을 `LocalStorage`에 저장한다.
@@ -42,7 +43,22 @@ toDos = removeList;
 saveList();
 ```
 
-## 4. Reset
+## 4. Load List
+- `LocalStorage`에 저장된 list 값을 불러올 때는 JSON 문자열로 변환된 값을 기존 형태로 다시 변환해주는 `JSON.parse()`함수를 사용한다.
+- 그 후에 `forEach()`함수를 사용하여 각각의 리스트를 출력해준다.
+```
+function loadList(){
+  const list = localStorage.getItem(LS_key);
+  if(list !== null){
+    const parsedToDos = JSON.parse(list);
+    parsedToDos.forEach(function(toDo){
+    printList(toDo.text);
+    })
+  }
+}
+```
+
+## 5. Reset
 - `LocalStorage`를 초기화하고 `location.href`를 사용하여 초기화면으로 돌아간다.
 ```
 function exitList(){
